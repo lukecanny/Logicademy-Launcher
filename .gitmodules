@@ -1,0 +1,6 @@
+[submodule "HDLGen-ChatGPT"]
+	path = HDLGen-ChatGPT
+	url = git://github.com/Logicademy/HDLGen-ChatGPT.git
+[submodule "PYNQ-SoC-Builder"]
+	path = PYNQ-SoC-Builder
+	url = git://github.com/Logicademy/PYNQ-SoC-Builder.git
