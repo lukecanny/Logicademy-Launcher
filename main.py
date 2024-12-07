@@ -3,7 +3,7 @@ import os
 import subprocess
 import sys
 from tkinter import PhotoImage
-
+import time
 class ProjectLauncher:
     def __init__(self, projects_config):
         """
@@ -76,6 +76,22 @@ class ProjectLauncher:
 #         print("Invalid Option Selected")
 #         main()
 
+class MainPage(ctk.CTkFrame):
+    def __init__(self, parent):
+        super().__init__(parent)
+        self.parent = parent
+
+        time.sleep(1)
+        print(self.parent.winfo_height())
+        print(self.parent.winfo_width())
+        
+        
+        
+        self.button = ctk.CTkButton(self, text="Hello")
+        self.button.pack()
+
+
+
 class Application:
     ###############################
     ##### Set Up Application ######
@@ -94,15 +110,14 @@ class Application:
         # self.root.resizable(False, False) # Dont let the window be resizable
         # self.root.protocol("WM_DELETE_WINDOW", self.on_close) # Set function to handle close
 
+        self.mainpage = MainPage(root)
+        self.mainpage.pack()
 
 
 def main():
     root = ctk.CTk()
     ctk.deactivate_automatic_dpi_awareness()    # Ignore Windows window scaling feature
     app = Application(root)
-
-
-
 
     # Load taskbar favicon
 
@@ -114,11 +129,6 @@ def main():
         root.iconphoto(False, PhotoImage(file=icon_path))
     except Exception as e:
         print(f"Could not set taskbar image: {e}")
-
-
-
-
-
 
     root.mainloop()
 
