@@ -3,7 +3,7 @@ import os
 import subprocess
 import sys
 from tkinter import PhotoImage
-import time
+
 class ProjectLauncher:
     def __init__(self, projects_config):
         """
@@ -81,7 +81,7 @@ class MainPage(ctk.CTkFrame):
         super().__init__(parent)
         self.parent = parent
 
-        time.sleep(1)
+        
         print(self.parent.winfo_height())
         print(self.parent.winfo_width())
         
