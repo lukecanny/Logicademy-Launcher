@@ -3,6 +3,7 @@ import os
 import subprocess
 import sys
 from tkinter import PhotoImage
+from PIL import Image, ImageTk
 
 class ProjectLauncher:
     def __init__(self, projects_config):
@@ -87,9 +88,25 @@ class MainPage(ctk.CTkFrame):
         
         
         
-        self.button = ctk.CTkButton(self, text="Hello")
-        self.button.pack()
+        # self.button = ctk.CTkButton(self, text="Hello")
+        # self.button.pack()
 
+        # Load the images and create clickable image labels
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        hdlgen_img = current_dir + "\\HDLGen-ChatGPT\\Application\\Resources\\blue_logo.png"
+        socbuilder_img = current_dir + "\\PYNQ-SoC-Builder\\docs\\images\\favicon.png"
+
+        image1 = Image.open(hdlgen_img)
+        image1 = image1.resize((150, 150), resample=Image.BICUBIC)
+        photo1 = ImageTk.PhotoImage(image1)
+        label1 = ctk.CTkLabel(self, image=photo1, cursor="hand2", text="")
+        label1.grid(row=0, column=0, padx=20, pady=20)
+
+        image2 = Image.open(socbuilder_img)
+        image2 = image2.resize((150, 150), resample=Image.BICUBIC)
+        photo2 = ImageTk.PhotoImage(image2)
+        label2 = ctk.CTkLabel(self, image=photo2, cursor="hand2", text="")
+        label2.grid(row=0, column=1, padx=20, pady=20)
 
 
 class Application:
@@ -111,7 +128,7 @@ class Application:
         # self.root.protocol("WM_DELETE_WINDOW", self.on_close) # Set function to handle close
 
         self.mainpage = MainPage(root)
-        self.mainpage.pack()
+        self.mainpage.place(relx=0.5, rely=0.5, anchor="center")
 
 
 def main():
