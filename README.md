@@ -8,9 +8,9 @@ This project is intended as a launcher to unify [HDLGen-ChatGPT](https://github.
 Please note only Python 3.10 is compatible at this time.
 
 <p align="center">
-  <img src="assets/png/title.png" width="50%" height="50%" />
+  <img src="assets/png/hdlgen_title_blue.png" width="50%" height="50%" />
 </p>
 
 <p align="center">
-  <img src="PYNQ-SoC-Builder/docs/images/pynq_title.png" width="50%" height="50%" />
+  <img src="assets/png/pynq_title.png" width="50%" height="50%" />
 </p>
