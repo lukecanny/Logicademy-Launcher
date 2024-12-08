@@ -11,6 +11,10 @@ Please note only Python 3.10 is compatible at this time.
   <img src="assets/png/hdlgen_title_blue.png" width="50%" height="50%" />
 </p>
 
+#
+
 <p align="center">
   <img src="assets/png/pynq_title.png" width="50%" height="50%" />
 </p>
+
+#
