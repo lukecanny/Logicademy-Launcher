@@ -7,6 +7,8 @@ This project is intended as a launcher to unify [HDLGen-ChatGPT](https://github.
 
 Please note only Python 3.10 is compatible at this time.
 
+#
+
 <p align="center">
   <img src="assets/png/hdlgen_title_blue.png" width="50%" height="50%" />
 </p>
